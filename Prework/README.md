@@ -1,2 +1,2 @@
 Prework -
-Build a simple calculator.
+Build a simple tip calculator.
