@@ -26,16 +26,15 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented app:
 
-[Imgur](https://imgur.com/RN4BKAw)
-<blockquote class="imgur-embed-pub" lang="en" data-id="RN4BKAw"><a href="https://imgur.com/RN4BKAw">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+[View GIF On Imgur](https://imgur.com/RN4BKAw)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had a tough time understanding the entire layout of xcode as I had only used eclipse and vscode before. Finding my way through xcode and understanding how the components speak to each other was definitely a challenging task as this is very different from everything I have done before in my coding experience.
 
 ## License
 
