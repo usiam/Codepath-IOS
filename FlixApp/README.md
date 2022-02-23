@@ -10,7 +10,6 @@ Time spent: **3** hours spent in total
 ## Flix Part 1
 
 ### User Stories
-`TODO://` In the **User Stories section below**, add an `x` in the `-[ ]` like this `- [x]` for any user story you complete. (🚫 Remove this paragraph after checking off completed user stories)
 
 #### REQUIRED (10pts)
 - [X] (2pts) User sees an app icon on the home screen and a styled launch screen.
@@ -23,7 +22,7 @@ Time spent: **3** hours spent in total
 
 ### App Walkthrough GIF
 
-[View GIF on Imgur](https://i.imgur.com/XY87oDl.gifv)
+[View GIF on Imgur](https://i.imgur.com/XY87oDl.gif)
 
 ### Notes
 Faced a lot of issues with installing pods. `brew install` finally worked instead of `gem install`. 
