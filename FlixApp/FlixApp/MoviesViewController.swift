@@ -70,14 +70,21 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let posterURL = URL(string: baseURL + posterPath)
         cell.posterView.af.setImage(withURL: posterURL!)
         return cell
+
+    }
+    
+    // function for changing views
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        let cell = UITableViewCell()
-//
-//        let movie = movies[indexPath.row]
-//        let title = movie["title"] as! String
-//        cell.textLabel!.text = title
-//
-//        return cell
+        // finding selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        
+        detailsViewController.movie = movie
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 }
