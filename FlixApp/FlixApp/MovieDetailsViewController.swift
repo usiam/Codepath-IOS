@@ -17,7 +17,7 @@ class MovieDetailsViewController: UIViewController {
     var movie: [String: Any]!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         titleLabel.text = movie["title"] as? String
         titleLabel.sizeToFit()
         synopsisLabel.text = movie["overview"] as? String
