@@ -9,6 +9,7 @@ import UIKit
 import AlamofireImage
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     // variables declared here are properties that will live
     // for the lifetime of the screen
     @IBOutlet weak var tableView: UITableView!
