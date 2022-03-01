@@ -27,7 +27,7 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         layout.minimumInteritemSpacing = 2
         
         // this does not take into account the spacings
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
         
         
         layout.itemSize = CGSize(width: width, height: width * 1.5)
@@ -43,13 +43,25 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                     self.movies = dataDictionary["results"]  as! [[String : Any]]
                     self.collectionView.reloadData()
-                    print(self.movies)
-                 
-                    
              }
         }
         task.resume()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    // function for changing views
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // finding selected movie
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.item]
+        
+        let detailsViewController = segue.destination as! MovieDetailsGridViewController
+        
+        detailsViewController.movie = movie
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
     
     
