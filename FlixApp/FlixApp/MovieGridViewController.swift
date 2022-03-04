@@ -24,10 +24,11 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         // minimum spacing between lines
         layout.minimumLineSpacing = 2
         // minimum space between items
-        layout.minimumInteritemSpacing = 2
+        layout.minimumInteritemSpacing = 6
         
         // this does not take into account the spacings
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
+        
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
         
         
         layout.itemSize = CGSize(width: width, height: width * 1.5)

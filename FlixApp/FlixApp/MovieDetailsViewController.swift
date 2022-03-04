@@ -8,13 +8,22 @@
 import UIKit
 import AlamofireImage
 class MovieDetailsViewController: UIViewController {
-    
+
     @IBOutlet weak var backdropView: UIImageView!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     
     var movie: [String: Any]!
+    
+    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let webView = segue.destination as! WebViewController
+        webView.movieID = movie["id"] as! Int
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -33,7 +42,7 @@ class MovieDetailsViewController: UIViewController {
         posterView.af.setImage(withURL: posterURL!)
         
         let backdropPath = movie["backdrop_path"] as! String
-        let backdropURL = URL(string: "https://image.tmdb.org/t/p/w780" + posterPath)
+        let backdropURL = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)
         backdropView.af.setImage(withURL: backdropURL!)
         
     }
