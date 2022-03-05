@@ -20,7 +20,7 @@ Time spent: **8** hours spent in total
 - [X] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthrough GIF
-[View GIF] (https://gfycat.com/pepperyhopefulasiansmallclawedotter)
+![](https://i.imgur.com/6k7xL9h.gif)
 
 ### Notes
 Faced difficulty in using webview and adding gesture with modal segue.
@@ -40,7 +40,7 @@ Faced difficulty in using webview and adding gesture with modal segue.
 
 ### App Walkthrough GIF
 
-[View GIF on Imgur](https://i.imgur.com/XY87oDl.gif)
+![](https://i.imgur.com/XY87oDl.gif)
 
 ### Notes
 Faced a lot of issues with installing pods. `brew install` finally worked instead of `gem install`. 
