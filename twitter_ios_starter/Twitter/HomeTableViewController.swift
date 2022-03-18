@@ -20,13 +20,20 @@ class HomeTableViewController: UITableViewController {
         // self because we want things to happen in this exact view controller
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
+        tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 150
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
     }
     
     @objc func loadTweets(){
         let myURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
-        numOfTweets = 5
-        let myParams = ["counts": numOfTweets]
-        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams as [String : Any], success: { (tweets:[NSDictionary]) in
+        numOfTweets = 10
+        let myParams = ["count": numOfTweets!]
+        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams, success: { (tweets:[NSDictionary]) in
             self.tweetsArray.removeAll()
             for tweet in tweets {
                 self.tweetsArray.append(tweet)
@@ -38,12 +45,12 @@ class HomeTableViewController: UITableViewController {
         })
     }
     
-    
     func loadMoreTweets(){
         let myURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
-        numOfTweets += 5
-        let myParams = ["counts": numOfTweets]
-        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams as [String : Any], success: { (tweets:[NSDictionary]) in
+        numOfTweets = numOfTweets + 5
+        let myParams = ["count": numOfTweets!]
+
+        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams, success: { (tweets:[NSDictionary]) in
             self.tweetsArray.removeAll()
             for tweet in tweets {
                 self.tweetsArray.append(tweet)
@@ -53,14 +60,14 @@ class HomeTableViewController: UITableViewController {
             print("Could not retrieve tweets.")
         })
     }
-    
+
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        // if you are at the end of the count 
-        if indexPath.row + 1 == tweetsArray.count{
+        // if you are at the end of the count
+        if indexPath.row + 1 == tweetsArray.count {
             loadMoreTweets()
         }
     }
-    
+
 
     @IBAction func onLogout(_ sender: Any) {
         
@@ -72,7 +79,7 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetTableViewCell
-        
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         let user = tweetsArray[indexPath.row]["user"] as! NSDictionary
         cell.userNameLabel.text = user["name"] as? String
         
@@ -87,6 +94,13 @@ class HomeTableViewController: UITableViewController {
             cell.profileImageView.image = UIImage(data: imageData)
         }
         
+        cell.setFavorite(tweetsArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetID = tweetsArray[indexPath.row]["id"] as! Int
+        
+        
+        cell.setRetweeted(tweetsArray[indexPath.row]["retweeted"] as! Bool) 
+        
+        
         return cell
     }
     
@@ -99,8 +113,5 @@ class HomeTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return tweetsArray.count
     }
-
-    
-    
 
 }
