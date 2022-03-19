@@ -62,9 +62,7 @@ class TweetViewController: UIViewController, UITextViewDelegate {
              let lngthToAdd = text.count
              let lengthCount = strLength + lngthToAdd
              countdownLabel.text = "\(lengthCount)/\(maxChar)"
-            if(lengthCount >= 180){
-                countdownLabel.textColor = UIColor.orange
-            } else if (lengthCount >= 240){
+            if(lengthCount >= 240){
                 countdownLabel.textColor = UIColor.red
             } else{
                 countdownLabel.textColor = UIColor.black

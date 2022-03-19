@@ -14,7 +14,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
     @IBOutlet weak var numTweetsLabel: UILabel!
-    @IBOutlet weak var numFollowingLabel: UILabel!
     @IBOutlet weak var numFollowersLabel: UILabel!
     
     var profileInfo: NSDictionary = NSDictionary()
@@ -51,13 +50,14 @@ class ProfileViewController: UIViewController {
             
             let numFollowers = info["followers_count"] as! Int
             self.numFollowersLabel.text = "Followers: \(numFollowers)"
-//            
-//            let imageURL = U(string: (info["profile_image_url_https"] as? String)!)
-//            let data = try? Data(contentsOf: imageURL!)
-//            
-//            if let imageData = data {
-//                cell.profileImageView.image = UIImage(data: imageData)
-//            }
+            
+            let imageURL = Foundation.URL(string: (info["profile_image_url_https"] as? String)!)
+
+            let data = try? Data(contentsOf: imageURL!)
+
+            if let imageData = data {
+                self.profileImageView.image = UIImage(data: imageData)
+            }
         }, failure: { (Error) in
             print("Could not retrieve profile info.")
         })

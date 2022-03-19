@@ -142,20 +142,20 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="JJP-o6-6G6">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="utT-2C-01n">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onLogout:" destination="vph-G0-3Po" id="vHB-yW-Prq"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Tweet" style="plain" id="gnK-RC-JuO">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="N5q-wg-G41" kind="presentation" id="Vdd-ju-llt"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Profile" id="W4F-qx-aDr">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="Rke-AT-wuW" kind="presentation" id="0qs-Qs-tK7"/>
                                 </connections>
@@ -188,21 +188,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoj-jl-9kV">
-                                <rect key="frame" x="118" y="132.5" width="55" height="21"/>
+                                <rect key="frame" x="118" y="114.5" width="55" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-DJ-UbO">
-                                <rect key="frame" x="189" y="132.5" width="72" height="21"/>
+                                <rect key="frame" x="189" y="114.5" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHw-op-JKY">
-                                <rect key="frame" x="16" y="48" width="98" height="94"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <rect key="frame" x="16" y="52" width="98" height="94"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="0Nc-Lc-Idb"/>
+                                    <constraint firstAttribute="height" constant="94" id="2sv-oo-uf1"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="98" id="YTi-BU-3ro"/>
                                     <constraint firstAttribute="width" constant="98" id="jjK-CI-qCI"/>
                                 </constraints>
                             </imageView>
@@ -210,23 +213,23 @@
                         <viewLayoutGuide key="safeArea" id="rSb-JE-pXA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aoj-jl-9kV" firstAttribute="top" secondItem="UA1-1k-ywU" secondAttribute="bottom" constant="36" id="1q5-nw-Qjx"/>
+                            <constraint firstItem="aoj-jl-9kV" firstAttribute="top" secondItem="UA1-1k-ywU" secondAttribute="bottom" constant="18" id="1q5-nw-Qjx"/>
                             <constraint firstItem="rSb-JE-pXA" firstAttribute="trailing" secondItem="UA1-1k-ywU" secondAttribute="trailing" id="HnB-bc-BLx"/>
                             <constraint firstItem="3s2-wj-s33" firstAttribute="top" secondItem="rSb-JE-pXA" secondAttribute="top" constant="4" id="NH1-IY-Tor"/>
                             <constraint firstItem="rHw-op-JKY" firstAttribute="leading" secondItem="uIn-4L-Cw0" secondAttribute="leadingMargin" id="XSw-uk-wx5"/>
-                            <constraint firstItem="rHw-op-JKY" firstAttribute="top" secondItem="rSb-JE-pXA" secondAttribute="top" constant="4" id="YmX-ES-ujH"/>
+                            <constraint firstItem="rHw-op-JKY" firstAttribute="top" secondItem="rSb-JE-pXA" secondAttribute="top" constant="8" id="YmX-ES-ujH"/>
                             <constraint firstItem="UA1-1k-ywU" firstAttribute="top" secondItem="3s2-wj-s33" secondAttribute="bottom" constant="4" id="d0X-Uy-vyX"/>
                             <constraint firstItem="aoj-jl-9kV" firstAttribute="leading" secondItem="rHw-op-JKY" secondAttribute="trailing" constant="4" id="fXN-cN-rJu"/>
+                            <constraint firstItem="rSb-JE-pXA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3s2-wj-s33" secondAttribute="trailing" symbolic="YES" id="gAe-og-R0W"/>
                             <constraint firstItem="Ofy-DJ-UbO" firstAttribute="leading" secondItem="aoj-jl-9kV" secondAttribute="trailing" constant="16" id="gNc-8m-iYj"/>
-                            <constraint firstItem="rSb-JE-pXA" firstAttribute="bottom" secondItem="rHw-op-JKY" secondAttribute="bottom" constant="525" id="h19-Om-B6L"/>
                             <constraint firstItem="3s2-wj-s33" firstAttribute="leading" secondItem="rHw-op-JKY" secondAttribute="trailing" constant="4" id="saE-xM-baH"/>
                             <constraint firstItem="UA1-1k-ywU" firstAttribute="leading" secondItem="rHw-op-JKY" secondAttribute="trailing" constant="4" id="ttw-aO-e3X"/>
-                            <constraint firstItem="Ofy-DJ-UbO" firstAttribute="top" secondItem="UA1-1k-ywU" secondAttribute="bottom" constant="36" id="wGz-3G-DtK"/>
+                            <constraint firstItem="Ofy-DJ-UbO" firstAttribute="top" secondItem="UA1-1k-ywU" secondAttribute="bottom" constant="18" id="wGz-3G-DtK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Unv-vb-Bsk">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="DZP-4t-bRW">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onHome:" destination="xgY-Rc-X2z" id="CU0-1y-PUj"/>
                             </connections>
@@ -281,13 +284,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="JvP-1T-PIs">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="jCy-17-R9X">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onCancel:" destination="m59-8I-1be" id="YPP-Fo-d2a"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="q6x-SX-1Wy">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onTweet:" destination="m59-8I-1be" id="ry8-fw-Rfa"/>
                             </connections>
@@ -378,9 +381,6 @@
         <image name="retweet-icon" width="30" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
