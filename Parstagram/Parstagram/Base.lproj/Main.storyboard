@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZR-Ns-aOM">
-                                <rect key="frame" x="64" y="262" width="106" height="21"/>
+                                <rect key="frame" x="64" y="262" width="128" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="106" id="2Vo-iH-lRK"/>
                                     <constraint firstAttribute="height" constant="21" id="R1T-4Y-ZGM"/>
@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ky2-QD-ZPu">
-                                <rect key="frame" x="64" y="303" width="270" height="34"/>
+                                <rect key="frame" x="64" y="303" width="292" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="TIf-8G-pdM"/>
                                     <constraint firstAttribute="width" constant="280" id="ULr-RH-q6k"/>
@@ -46,15 +46,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ol7-DN-yXv">
-                                <rect key="frame" x="64" y="397" width="268" height="34"/>
+                                <rect key="frame" x="64" y="397" width="290" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="instagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bQE-vf-Y8Z">
-                                <rect key="frame" x="16" y="129" width="360" height="108"/>
+                                <rect key="frame" x="16" y="129" width="382" height="108"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzk-J9-ceh">
-                                <rect key="frame" x="224" y="451" width="110" height="31"/>
+                                <rect key="frame" x="246" y="451" width="110" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="4mK-vm-fnh"/>
                                     <constraint firstAttribute="height" constant="31" id="rLz-hi-TYh"/>
